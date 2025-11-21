@@ -9,13 +9,18 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
+    opacity: 0.8;
     width: 100%;
     position: fixed;
 }
 
 header,
-footer {
+footer nav {
     background-color: red;
     display: flex;
     align-items: center;
@@ -23,25 +28,32 @@ footer {
     justify-content: space-between;
 }
 
-footer {
+footer nav {
     justify-content: space-around;
-}
-
-nav {
-    background-color: yellow;
 }
 
 nav a,
 header,
 footer {
-    padding: 2rem;
+    background-color: lightblue;
+    padding: 1rem;
 }
 
 footer a {
     text-align: center;
     padding: 1% 2%;
     background-color: green;
-    flex:1;
+    flex: 1;
+}
+
+footer a:hover {
+    color: black;
+    background-color: palegreen;
+}
+
+.foot-text {
+    line-height: 300%;
+    text-align: center;
 }
 
 section {
@@ -52,6 +64,6 @@ section:first-child {
     padding-top: 8rem;
 }
 
-.rounded{
-    border-radius:12px;
+.rounded {
+    border-radius: 12px;
 }
