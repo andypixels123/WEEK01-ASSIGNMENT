@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: monospace;
     background-color: black;
     color: white;
 }
@@ -52,16 +53,16 @@ footer a:hover {
 }
 
 .foot-text {
-    line-height: 300%;
+    margin: 3em 0 2em 0;
     text-align: center;
 }
 
 section {
-    padding: 2%;
+    padding: 0 2% 5% 2%;
 }
 
 section:first-child {
-    padding-top: 8rem;
+    padding-top: 100px;
 }
 
 .rounded {
