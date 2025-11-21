@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+}
+
+header,
+footer {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+footer {
+    justify-content: space-around;
+}
+
+nav {
+    background-color: yellow;
+}
+
+nav a,
+header,
+footer {
+    padding: 2rem;
+}
+
+footer a {
+    text-align: center;
+    padding: 1% 2%;
+    background-color: green;
+    flex:1;
+}
+
+section {
+    padding: 2%;
+}
+
+section:first-child {
+    padding-top: 8rem;
+}
+
+.rounded{
+    border-radius:12px;
+}
