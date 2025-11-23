@@ -2,54 +2,133 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    line-height: 1;
 }
 
 body {
-    font-family: monospace;
-    background-color: black;
-    color: white;
+    font-family: arial;
+    background-color: white;
+    color: #444;
+}
+
+h1,
+h2 {
+    /* margin-bottom: 20px;*/
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0 5% 0 3%;
 }
 
 a {
-    text-decoration: none;
+    color: #444;
+    transition: 0.8s;
+}
+
+p {
+    line-height: 150%;
+    padding: 10px;
+}
+
+header,
+header nav,
+footer nav,
+.item {
+    display: flex;
 }
 
 header {
-    opacity: 0.8;
     width: 100%;
-    position: fixed;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+header,
+.item {
+    background-color: red;
+}
+
+nav a,
+.quote,
+.item a {
+    font-size: 120%;
+}
+
+header nav,
+footer nav {
+    gap: 5px;
 }
 
 header,
 footer nav {
-    background-color: red;
-    display: flex;
     align-items: center;
     align-content: center;
-    justify-content: space-between;
 }
 
 footer nav {
+    width: 80%;
+    margin: auto;
     justify-content: space-around;
 }
 
 nav a,
-header,
+.tagline,
 footer {
-    background-color: lightblue;
-    padding: 1rem;
+    background-color: silver;
+    padding: 16px;
+}
+
+.tagline {
+    margin-bottom: 50px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+footer a,
+.item a {
+    padding: 1em 2%;
+    text-align: center;
+    background-color: #ccc;
 }
 
 footer a {
-    text-align: center;
-    padding: 1% 2%;
-    background-color: green;
     flex: 1;
 }
 
-footer a:hover {
-    color: black;
-    background-color: palegreen;
+footer a:hover,
+.item a:hover {
+    background-color: #eee;
+}
+
+section {
+    padding: 0 2% 5% 2%;
+}
+
+.quote {
+    font-family: monospace;
+    font-style: italic;
+    text-align: center;
+}
+
+.item {
+    /* CHANGE TO RELATIVE / ABSOLUTE POSITIONING, NOT FLEXBOX */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin: 5%;
+    padding: 2%;
+    box-shadow: 0 0 35px #555;
+}
+
+.item a {
+    display: block;
+    width: calc(100%/2);
 }
 
 .foot-text {
@@ -57,14 +136,36 @@ footer a:hover {
     text-align: center;
 }
 
-section {
-    padding: 0 2% 5% 2%;
-}
-
-section:first-child {
-    padding-top: 100px;
-}
-
-.rounded {
+.round {
     border-radius: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    h1 {
+        margin: 0 3% 1em 3%;
+    }
+
+    .item {
+        width: 90%;
+        padding: 5%;
+    }
+
+    footer nav {
+
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .item a {
+        width: 100%;
+    }
+
+    footer nav {
+        width: 100%;
+    }
 }
